@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>WheelManager.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">assign4</a> &gt; <a href="index.source.html" class="el_package">wheel</a> &gt; <span class="el_source">WheelManager.java</span></div><h1>WheelManager.java</h1><pre class="source lang-java linenums">package wheel;
+
+import java.util.*;
+import java.util.stream.Collectors;
+
+public class WheelManager {
+	private final DefaultRules wheelRules;
+
+<span class="fc" id="L9">	public WheelManager() {</span>
+<span class="fc" id="L10">		wheelRules = new DefaultRules();</span>
+<span class="fc" id="L11">	}</span>
+
+	public String getPropertiesOfAWheel(Wheel wheel) {
+<span class="fc" id="L14">		StringJoiner wheelProperties = new StringJoiner(&quot;, &quot;);</span>
+
+<span class="fc" id="L16">		wheelProperties.add(&quot;wheelDiameter: &quot; + wheel.getDiameter());</span>
+<span class="fc" id="L17">		wheelProperties.add(&quot;hubDiameter: &quot; + wheel.getHub().getDiameter());</span>
+<span class="fc" id="L18">		wheelProperties.add(&quot;numberOfSpokes: &quot; + wheel.getSpokes().size());</span>
+
+<span class="fc" id="L20">		return wheelProperties.toString();</span>
+	}
+
+	public Wheel loadAWheelFromProperties(String wheelProperties) {
+<span class="fc" id="L24">		String[] propertyArray = wheelProperties.split(&quot;, &quot;);</span>
+
+<span class="fc" id="L26">		List&lt;Double&gt; properties = Arrays.stream(propertyArray)</span>
+<span class="fc" id="L27">			.map(property -&gt; property.substring(property.indexOf(&quot;: &quot;) + 1))</span>
+<span class="fc" id="L28">			.map(Double::valueOf)</span>
+<span class="fc" id="L29">			.collect(Collectors.toList());</span>
+
+<span class="fc" id="L31">		double wheelDiameter = properties.get(0);</span>
+<span class="fc" id="L32">		double hubDiameter = properties.get(1);</span>
+<span class="fc" id="L33">		int numberOfSpokes = properties.get(2).intValue();</span>
+
+<span class="fc" id="L35">		return wheelRules.createCustomWheel(wheelDiameter, hubDiameter, numberOfSpokes);</span>
+	}
+
+	public Wheel loadAPresetWheel() {
+<span class="fc" id="L39">		return wheelRules.createWheel();</span>
+	}
+
+	public List&lt;String&gt; getDesignNameFromList(List&lt;String&gt; listOfDesign) {
+<span class="fc" id="L43">		return listOfDesign</span>
+<span class="fc" id="L44">			.stream()</span>
+<span class="fc" id="L45">			.map(design -&gt; design.substring(0, design.indexOf(&quot;===&quot;)))</span>
+<span class="fc" id="L46">			.collect(Collectors.toList());</span>
+	}
+
+	public List&lt;String&gt; getDesignPropertiesFromList(List&lt;String&gt; listOfDesign) {
+<span class="fc" id="L50">		return listOfDesign</span>
+<span class="fc" id="L51">			.stream()</span>
+<span class="fc" id="L52">			.map(design -&gt; design.substring(design.indexOf(&quot;===&quot;) + 3))</span>
+<span class="fc" id="L53">			.collect(Collectors.toList());</span>
+	}
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

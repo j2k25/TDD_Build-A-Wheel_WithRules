@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="wheel.TestWheel" tests="5" skipped="0" failures="0" errors="0" timestamp="2021-11-16T09:10:41" hostname="J-LAP" time="0.035">
+  <properties/>
+  <testcase name="propagateExceptionWhenWheelDiameterCantBeChanged()" classname="wheel.TestWheel" time="0.007"/>
+  <testcase name="canary()" classname="wheel.TestWheel" time="0.006"/>
+  <testcase name="wheelRulesCreatesWheelDiameter4()" classname="wheel.TestWheel" time="0.003"/>
+  <testcase name="wheelDiameterChangedWhenWheelRuleApproves()" classname="wheel.TestWheel" time="0.004"/>
+  <testcase name="wheelDiameterDoesNotChangedWhenWheelRuleDisapproves()" classname="wheel.TestWheel" time="0.004"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

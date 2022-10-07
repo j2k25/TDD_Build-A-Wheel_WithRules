@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>DefaultRules.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">assign4</a> &gt; <a href="index.source.html" class="el_package">wheel</a> &gt; <span class="el_source">DefaultRules.java</span></div><h1>DefaultRules.java</h1><pre class="source lang-java linenums">package wheel;
+
+public class DefaultRules implements WheelRules {
+	Wheel wheel;
+
+<span class="fc" id="L6">	DefaultRules() {</span>
+<span class="fc" id="L7">		wheel = new Wheel(this, 4, 1, 8);</span>
+<span class="fc" id="L8">	}</span>
+
+	public Wheel createWheel() {
+<span class="fc" id="L11">		wheel = new Wheel(this, 4, 1, 8);</span>
+<span class="fc" id="L12">		return wheel;</span>
+	}
+
+	public Wheel createCustomWheel(double wheelDiameter, double hubDiameter, int numberOfSpokes) {
+<span class="fc" id="L16">		wheel = new Wheel(this, wheelDiameter, hubDiameter, numberOfSpokes);</span>
+<span class="fc" id="L17">		return wheel;</span>
+	}
+
+	@Override
+	public boolean isOKToChangeWheelDiameter(double newDiameter) {
+<span class="fc bfc" id="L22" title="All 2 branches covered.">		if (newDiameter &gt;= wheel.getHub().getDiameter() * 4) {</span>
+<span class="fc" id="L23">			return true;</span>
+		}
+<span class="fc" id="L25">		throw new IllegalArgumentException(&quot;Invalid wheel diameter&quot;);</span>
+	}
+
+	@Override
+	public boolean isOKToChangeHubDiameter(double newDiameter) {
+<span class="fc bfc" id="L30" title="All 4 branches covered.">		if (newDiameter &gt; 0 &amp;&amp; newDiameter * 4 &lt;= wheel.getDiameter()) {</span>
+<span class="fc" id="L31">			return true;</span>
+		}
+<span class="fc" id="L33">		throw new IllegalArgumentException(&quot;Invalid hub diameter&quot;);</span>
+	}
+
+	@Override
+	public boolean isOKToChangeNumberOfSpokes(int newNumberOfSpokes) {
+<span class="fc bfc" id="L38" title="All 4 branches covered.">		if (newNumberOfSpokes &gt;= 8 &amp;&amp; newNumberOfSpokes &lt; 10000) {</span>
+<span class="fc" id="L39">			return true;</span>
+		}
+<span class="fc" id="L41">		throw new IllegalArgumentException(&quot;Invalid number of spokes&quot;);</span>
+	}
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

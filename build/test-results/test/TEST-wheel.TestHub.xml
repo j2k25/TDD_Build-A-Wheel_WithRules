@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="wheel.TestHub" tests="4" skipped="0" failures="0" errors="0" timestamp="2021-11-16T09:10:38" hostname="J-LAP" time="2.579">
+  <properties/>
+  <testcase name="propagateExceptionWhenHubDiameterCantBeChanged()" classname="wheel.TestHub" time="2.508"/>
+  <testcase name="wheelCreatedByWheelRulesHasAHubWithDiameter1()" classname="wheel.TestHub" time="0.005"/>
+  <testcase name="hubDiameterDoesNotChangeWhenWheelRulesDisapproves()" classname="wheel.TestHub" time="0.036"/>
+  <testcase name="hubDiameterChangesWhenTheWheelRulesApproves()" classname="wheel.TestHub" time="0.006"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

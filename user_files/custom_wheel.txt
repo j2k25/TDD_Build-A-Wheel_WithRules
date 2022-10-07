@@ -1,0 +1,12 @@
+my first design === wheelDiameter: 4.4, hubDiameter: 0.5, numberOfSpokes: 10
+1636597637179===wheelDiameter: 4.4, hubDiameter: 0.8, numberOfSpokes: 8
+1636597649946===wheelDiameter: 4.4, hubDiameter: 0.6, numberOfSpokes: 10
+1636598103682===wheelDiameter: 4.0, hubDiameter: 1.0, numberOfSpokes: 8
+my coolio design===wheelDiameter: 5.9, hubDiameter: 0.3, numberOfSpokes: 13
+Very tiny wheel===wheelDiameter: 1.4, hubDiameter: 0.1, numberOfSpokes: 31
+Sun flower===wheelDiameter: 6.7, hubDiameter: 1.6, numberOfSpokes: 12
+Lemon Slide===wheelDiameter: 5.3, hubDiameter: 0.8, numberOfSpokes: 16
+4ord===wheelDiameter: 4.4, hubDiameter: 0.4, numberOfSpokes: 44
+j's not likely wheel===wheelDiameter: 6, hubDiameter: 0.5, numberOfSpokes: 9999
+iris===wheelDiameter: 2.5, hubDiameter: 0.6, numberOfSpokes: 9999
+nova===wheelDiameter: 13.3, hubDiameter: 3.3, numberOfSpokes: 44

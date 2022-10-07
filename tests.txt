@@ -1,0 +1,45 @@
+TestWheelRules
+
+Xcanary
+XWheelRules creates a wheel with size of 4
+Xwheel size is changed if WheelRule approves of the change
+Xwheel size is not changed if WheelRule disapproves of the change
+XWhen wheel size is not changed the set propagates the reason WheelRule rejected the change
+
+xThe Wheel created by WheelRule has a hub size of 1
+xHub's size is changed if WheelRule approves the change
+xhub diameter changes when WheelRules approves after Wheel diameter change
+xHub's size is not changed if WheelRule does not approve the change
+xException propagated when hub's size can't be changed
+
+xThe Wheel created by WheelRule has eight spokes
+xLength of the spoke is correct upon creation
+xWhen wheel diameter is changed the spokes' length changes
+xWhen hub diameter is changed the spokes' length changes
+xAdd a spoke to a wheel
+xAdd then remove a spoke from a wheel
+xCan't remove a spoke if there are only eight
+xCan't add a spoke if all spokes can't be reasonably spaced in a wheel
+xException propagated when number of spokes can't be changed
+
+
+xWheelRules creates a Wheel.
+xAt least 8 spokes are required.
+xNot allow spoke addition if there are too many spokes to fit.
+xAllows removing a spoke if there are at least 8.
+xNot allow wheel diameter to be smaller than 4 times of the hub diameter
+xAllow changing wheel diameter as long as wheel stays bigger than 4 times hub diameter
+xNot allow hub diameter to be bigger than a quarter of the wheel diameter
+xNot allow hub diameter to be smaller than 0.
+xAllow changing hub diameter as long as smaller than 1/4 of the wheel diameter
+xPropagate exception when Wheel diameter can't be changed
+xPropagate exception when Hub diameter can't be changed
+xPropagate exception when number of Spokes can't be changed
+
+xsaved wheel has 3 properties.
+xsave a custom wheel
+xload a preset wheel
+xload a custom wheel
+xload another customwheel
+xextract design name from the design record
+xextract design property from design record

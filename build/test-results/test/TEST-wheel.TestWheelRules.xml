@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="wheel.TestWheelRules" tests="11" skipped="0" failures="0" errors="0" timestamp="2021-11-16T09:10:41" hostname="J-LAP" time="0.049">
+  <properties/>
+  <testcase name="propagateExceptionWhenHubDiameterCantBeChanged()" classname="wheel.TestWheelRules" time="0.003"/>
+  <testcase name="propagateExceptionWhenWheelDiameterCantBeChanged()" classname="wheel.TestWheelRules" time="0.002"/>
+  <testcase name="NotAllowSpokeAdditionIfThereAreTooManySpokesToFit()" classname="wheel.TestWheelRules" time="0.007"/>
+  <testcase name="allowChangingWheelDiameterAsLongAsBiggerThan4xHubDiameter()" classname="wheel.TestWheelRules" time="0.001"/>
+  <testcase name="allowsSpokeRemovalIfThereAreAtLeast8()" classname="wheel.TestWheelRules" time="0.001"/>
+  <testcase name="notAllowHubDiameterToBe0()" classname="wheel.TestWheelRules" time="0.003"/>
+  <testcase name="allowChangingHubDiameterAsLongAsSmallerThanQuarterOfWheelDiameter()" classname="wheel.TestWheelRules" time="0.001"/>
+  <testcase name="atLeast8SpokesAreRequired()" classname="wheel.TestWheelRules" time="0.003"/>
+  <testcase name="propagateExceptionWhenNumberOfSpokesCantBeChanged()" classname="wheel.TestWheelRules" time="0.002"/>
+  <testcase name="notAllowWheelDiameterToBeSmallerThan4xHubDiameter()" classname="wheel.TestWheelRules" time="0.003"/>
+  <testcase name="notAllowHubDiameterToBeBiggerThanQuarterOfWheelDiameter()" classname="wheel.TestWheelRules" time="0.003"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
